@@ -3,6 +3,9 @@ body {
   margin: 0;
   font-family:  'Raleway','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: #FFFFFF;
+  color: #345EEB;
+  text-align: center;
+  line-height: 200%;
 }
 
 /*-------------------------------------------------------------------------------*/
@@ -10,6 +13,9 @@ body {
 .topnav {
   overflow: hidden;
   background-color: #D7E0FF;
+  position: sticky;
+  top: 0px;
+  box-shadow: 0px 1px 24px #345EEB;
 }
 .topnav a {
   float: right;
@@ -41,7 +47,6 @@ body {
 
 .dropdown {
   float: right;
-  overflow: visible;
 }
 
 .dropdown .dropbtn {
@@ -62,7 +67,7 @@ body {
 
 .dropdown-content {
   display: none;
-  position: absolute;
+  position: fixed;
   background-color: #f9f9f9;
   min-width: 240px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -92,7 +97,7 @@ body {
 /* Footer basic styling */
 footer {
   text-align: left;
-  padding: 40px 250px;
+  padding: 40px 15%;
   background-color: #345EEB;
   color: white;
   font-size: 24px;
@@ -101,4 +106,57 @@ footer {
 .grid-container {
   display: grid;
   grid-template-columns: 3fr 1fr;
+}
+
+/*-------------------------------------------------------------------------------*/
+/* Heading that isnt attached to top of page */
+.bigtext {
+  background-color: #D7E0FF;
+  text-align: center;
+  font-size: 80px;
+  color:#345EEB;
+  padding: 150px;
+  line-height: 100%;
+}
+
+/*-------------------------------------------------------------------------------*/
+/* Subheadings basic style */
+h2 {
+  text-align: center;
+  font-size: 80px;
+  color: #345EEB;
+}
+
+h3 {
+  text-align: center;
+  font-size: 50px;
+  color: #345EEB;
+}
+
+/*-------------------------------------------------------------------------------*/
+/* Paragraph basic style */
+p {
+  text-align: center;
+  font-size: 20px;
+  color: #345EEB;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.pgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/*-------------------------------------------------------------------------------*/
+/* Statistics animation */
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 50px;
+  padding-left: 20%;
+  padding-right: 20%;
+  gap: 30px;
+  font-size: 50px;
+  font-weight: 10;
 }
