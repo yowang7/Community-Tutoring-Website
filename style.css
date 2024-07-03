@@ -13,11 +13,18 @@ hr {
   margin: 8%;
 }
 
+img{
+  height: 200px;
+  width: auto;
+}
+
 /*-------------------------------------------------------------------------------*/
 /*Top navigation basic styling */
 .topnav {
   overflow: hidden;
-  background-color: #D7E0FF;
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px);
   position: sticky;
   top: 0px;
   box-shadow: 0px 1px 24px #345EEB;
@@ -34,7 +41,7 @@ hr {
 }
 
 .topnav a.home {
-  background-color: #D7E0FF;
+  background-color: rgba(255, 255, 255, 0);
   color: #345EEB;
   text-align: center;
   padding: 40px 32px;
@@ -273,7 +280,7 @@ p {
   padding-block: 1rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .scroller[data-animated="true"] {
@@ -313,7 +320,7 @@ p {
 
 @keyframes scroll {
   to {
-    transform: translate(calc(-50% - 0.5rem));
+    transform: translate(calc(-50% - 1rem));
   }
 }
 
