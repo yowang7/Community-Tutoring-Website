@@ -65,3 +65,28 @@ function addAnimation() {
     });
   });
 }
+
+ // Get elements
+ const bioLink = document.getElementById('bioLink');
+ const popupBox = document.getElementById('popupBox');
+ const closeBtn = document.getElementById('closeBtn');
+ const overlay = document.getElementById('overlay');
+
+ // Function to show the pop-up
+ bioLink.addEventListener('click', function(event) {
+     event.preventDefault();
+     popupBox.style.display = 'block';
+     overlay.style.display = 'block';
+ });
+
+ // Function to hide the pop-up
+ closeBtn.addEventListener('click', function() {
+     popupBox.style.display = 'none';
+     overlay.style.display = 'none';
+ });
+
+ // Function to hide the pop-up when clicking outside the pop-up box
+ overlay.addEventListener('click', function() {
+     popupBox.style.display = 'none';
+     overlay.style.display = 'none';
+ });

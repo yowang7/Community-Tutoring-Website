@@ -337,3 +337,44 @@ p {
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
 }
+/*-------------------------------------------------------------------------------*/
+/* Pop-up bios */
+/* Style for the pop-up box */
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #888;
+  width: 60%; /* Adjusted width */
+  height: 60%; /* Adjusted height */
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+  overflow-y: auto; /* Add scrolling if content overflows */
+  border-radius: 15px; /* Rounded corners */
+}
+
+/* Style for the overlay */
+.overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
+/* Close button style */
+.close-btn {
+  font-family: inherit;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
