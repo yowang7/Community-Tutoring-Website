@@ -45,6 +45,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+////////////////////////////////////////////////////////////////////////
+
+window.addEventListener('scroll', function() {
+    const scrollAngle = window.scrollY / 15; // Adjust divisor for speed of rotation
+    const diag = document.getElementById('diag');
+    const topnav = document.getElementsByClassName('topnav');
+    if((335 + scrollAngle) < 360){
+        diag.style.height = `${100 + window.scrollY / 8}%`;
+        diag.style.background = `linear-gradient(${335 + scrollAngle}deg, transparent 50%, #D7E0FF 50%)`;
+        //topnav[0].style.borderBottom = 'none';
+    } else {
+        //topnav[0].style.borderBottom = '25px solid #D7E0FF';
+    }
+});
+
+////////////////////////////////////////////////////////////////////////
+
 const scrollers = document.querySelectorAll(".scroller");
 
 addAnimation();
@@ -90,3 +107,4 @@ function addAnimation() {
      popupBox.style.display = 'none';
      overlay.style.display = 'none';
  });
+
