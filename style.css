@@ -1,7 +1,7 @@
 /*Basic fonts/background for entire body of page */
 body {
   margin: 0;
-  font-family:  'Raleway','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Raleway', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: #FFFFFF;
   color: #345EEB;
   text-align: center;
@@ -13,7 +13,7 @@ hr {
   margin: 8%;
 }
 
-img{
+img {
   height: 200px;
   width: auto;
 }
@@ -22,41 +22,41 @@ img{
 /*Top navigation basic styling */
 .topnav {
   overflow: hidden;
-  background-color: white;/*rgba(255, 255, 255, 0);*/
+  background-color: white;
+  /*rgba(255, 255, 255, 0);*/
   /*backdrop-filter: blur(10px); /* Blur effect */
   /*-webkit-backdrop-filter: blur(10px);*/
   position: sticky;
   top: 0px;
   box-shadow: 0px 1px 24px #345EEB;
   z-index: 1;
+  font-size: 24px;
 }
+
 .topnav a {
   float: right;
   color: #345EEB;
   text-align: center;
   padding: 40px 32px;
-  text-decoration: none;
-  font-size: 30px;
-  transition: background-color 0.7s ease, color 0.7s ease, text-shadow 0.7s ease;
+  text-decoration: underline transparent;
+  transition: text-decoration 700ms ease;
 }
 
 .topnav a.home {
-  background-color: white;/*rgba(255, 255, 255, 0);*/
+  background-color: white;
+  /*rgba(255, 255, 255, 0);*/
   color: #345EEB;
   text-align: center;
   padding: 40px 32px;
-  text-decoration: none;
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .topnav a:hover {
-  background-color: #345EEB;
-  color: white;
+  text-decoration-color: #345EEB;
 }
 
 .topnav a.active {
-  background-color: #345EEB;
-  color: white;
+  text-decoration-color: #345EEB;
 }
 
 .dropdown {
@@ -64,28 +64,29 @@ img{
 }
 
 .dropdown .dropbtn {
-  font-size: 30px;  
+  font-size: 24px;
   border: none;
   outline: none;
   color: #345EEB;
-  padding: 40px 32px;
+  padding: 42px 32px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
-  transition: background-color 0.7s ease, color 0.7s ease;
+  text-decoration: underline transparent;
+  transition: text-decoration 700ms ease;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #345EEB;
-  color: white;
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  text-decoration-color: #345EEB;
 }
 
 .dropdown-content {
   display: none;
   position: fixed;
   background-color: #f9f9f9;
-  min-width: 240px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  min-width: 210px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 2;
 }
 
@@ -96,7 +97,7 @@ img{
   text-decoration: none;
   display: block;
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .dropdown-content a:hover {
@@ -136,7 +137,7 @@ footer {
   background-color: #D7E0FF;
   text-align: center;
   font-size: 80px;
-  color:#345EEB;
+  color: #345EEB;
   padding: 150px;
   line-height: 100%;
 }
@@ -233,7 +234,8 @@ p {
 .flip-box {
   width: 100%;
   height: 300px;
-  perspective: 1000px; /* Adds perspective for 3D effect */
+  perspective: 1000px;
+  /* Adds perspective for 3D effect */
 }
 
 .flip-box-inner {
@@ -241,18 +243,22 @@ p {
   width: 100%;
   height: 100%;
   transition: transform 0.6s;
-  transform-style: preserve-3d; /* Allows for 3D transformations */
+  transform-style: preserve-3d;
+  /* Allows for 3D transformations */
 }
 
 .flip-box:hover .flip-box-inner {
-  transform: rotateY(180deg); /* Flips the box on hover */
+  transform: rotateY(180deg);
+  /* Flips the box on hover */
 }
 
-.flip-box-front, .flip-box-back {
+.flip-box-front,
+.flip-box-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden; /* Hides the back of the flipped element */
+  backface-visibility: hidden;
+  /* Hides the back of the flipped element */
 }
 
 .flip-box-front {
@@ -266,10 +272,12 @@ p {
   display: grid;
   background-color: #345EEB;
   color: white;
-  transform: rotateY(180deg); /* Initially hidden, flipped state */
+  transform: rotateY(180deg);
+  /* Initially hidden, flipped state */
   border-radius: 16px;
   place-items: center;
 }
+
 /*-------------------------------------------------------------------------------*/
 /* Partners animation */
 .scroller {
@@ -285,21 +293,18 @@ p {
 
 .scroller[data-animated="true"] {
   overflow: hidden;
-  -webkit-mask: linear-gradient(
-    90deg,
-    transparent,
-    white 20%,
-    white 80%,
-    transparent
-  );
+  -webkit-mask: linear-gradient(90deg,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent);
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
 .scroller[data-animated="true"] .scroller__inner {
   width: max-content;
   flex-wrap: nowrap;
-  animation: scroll var(--_animation-duration, 40s)
-    var(--_animation-direction, forwards) linear infinite;
+  animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
 }
 
 .scroller[data-direction="right"] {
@@ -337,35 +342,42 @@ p {
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
 }
+
 /*-------------------------------------------------------------------------------*/
 /* Pop-up bios */
 /* Style for the pop-up box */
 .popup {
-  display: none; /* Hidden by default */
+  display: none;
+  /* Hidden by default */
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   border: 1px solid #888;
-  width: 60%; /* Adjusted width */
-  height: 60%; /* Adjusted height */
+  width: 60%;
+  /* Adjusted width */
+  height: 60%;
+  /* Adjusted height */
   background-color: white;
   padding: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  overflow-y: auto; /* Add scrolling if content overflows */
-  border-radius: 15px; /* Rounded corners */
+  overflow-y: auto;
+  /* Add scrolling if content overflows */
+  border-radius: 15px;
+  /* Rounded corners */
 }
 
 /* Style for the overlay */
 .overlay {
-  display: none; /* Hidden by default */
+  display: none;
+  /* Hidden by default */
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
