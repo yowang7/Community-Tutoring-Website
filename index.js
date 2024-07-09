@@ -83,28 +83,24 @@ function addAnimation() {
   });
 }
 
- // Get elements
- const bioLink = document.getElementById('bioLink');
- const popupBox = document.getElementById('popupBox');
- const closeBtn = document.getElementById('closeBtn');
- const overlay = document.getElementById('overlay');
+document.querySelectorAll('.openModal').forEach(button => {
+    button.onclick = function() {
+        const modalId = this.getAttribute('data-modal');
+        document.getElementById(modalId).style.display = 'block';
+    }
+});
 
- // Function to show the pop-up
- bioLink.addEventListener('click', function(event) {
-     event.preventDefault();
-     popupBox.style.display = 'block';
-     overlay.style.display = 'block';
- });
+document.querySelectorAll('.close').forEach(span => {
+    span.onclick = function() {
+        const modalId = this.getAttribute('data-modal');
+        document.getElementById(modalId).style.display = 'none';
+    }
+});
 
- // Function to hide the pop-up
- closeBtn.addEventListener('click', function() {
-     popupBox.style.display = 'none';
-     overlay.style.display = 'none';
- });
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+    }
+}
 
- // Function to hide the pop-up when clicking outside the pop-up box
- overlay.addEventListener('click', function() {
-     popupBox.style.display = 'none';
-     overlay.style.display = 'none';
- });
 
