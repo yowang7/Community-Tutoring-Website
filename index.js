@@ -52,7 +52,7 @@ window.addEventListener('scroll', function() {
     const diag = document.getElementById('diag');
     const topnav = document.getElementsByClassName('topnav');
     if((335 + scrollAngle) < 360){
-        diag.style.height = `${100 + window.scrollY / 8}%`;
+        diag.style.height = `${110 + window.scrollY / 6}%`;
         diag.style.background = `linear-gradient(${335 + scrollAngle}deg, transparent 49.6%, #345EEB 0.1%, #D7E0FF 50%)`;
         //topnav[0].style.borderBottom = 'none';
     } else {
@@ -102,5 +102,4 @@ window.onclick = function(event) {
         event.target.style.display = 'none';
     }
 }
-
 
