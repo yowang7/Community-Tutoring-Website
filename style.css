@@ -125,25 +125,69 @@ strong {
 
 /*-------------------------------------------------------------------------------*/
 /* Footer basic styling */
-footer {
-  text-align: center;
-  padding: 40px 10%;
+.footer {
+  display: flex;
+  text-align: left;
+  width: 100%;
   background-color: #345EEB;
   color: white;
   font-size: 24px;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  place-items: center;
+.footer-section {
+  padding: 20px;
 }
 
-.grid-item a {
-  color: white;
-  text-decoration: none;
+.left {
+  width: 40%;
+  border-right: 1px solid #fff;
+  text-align: left;
 }
+
+.middle {
+  width: 40%;
+  border-right: 1px solid #fff;
+  text-align: left;
+}
+
+.right {
+  width: 20%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer {
+      flex-direction: column;
+  }
+
+  .footer-section {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #fff;
+  }
+
+  .footer-section:last-child {
+      border-bottom: none;
+  }
+}
+
+.footer-image {
+
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 100px;
+  text-decoration: none;
+  margin: 0 0 30px;
+}
+
+.social-icon:hover {
+  color: #ccc;
+  cursor: pointer;
+}
+
+
 
 /*-------------------------------------------------------------------------------*/
 /* Heading that isnt attached to top of page */
