@@ -114,6 +114,15 @@ strong {
   display: block;
 }
 
+.fa {
+  transition: transform 500ms;
+}
+
+.dropdown:hover .fa {
+  transform: rotate(-180deg);
+}
+
+
 /*-------------------------------------------------------------------------------*/
 /* Footer basic styling */
 footer {
@@ -458,4 +467,3 @@ p {
 
 /* Modal Body */
 .modal-body {padding: 2px 16px;}
-
