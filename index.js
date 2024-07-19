@@ -53,7 +53,7 @@ window.addEventListener('scroll', function() {
     const topnav = document.getElementsByClassName('topnav');
     if((335 + scrollAngle) < 360){
         diag.style.height = `${110 + window.scrollY / 6}%`;
-        diag.style.background = `linear-gradient(${335 + scrollAngle}deg, transparent 49.6%, #345EEB 0.1%, #D7E0FF 50%)`;
+        diag.style.background = `linear-gradient(${335 + scrollAngle}deg, transparent 49.6%, #345EEB 0.1%, rgb(54,94,235,0.2) 50%)`;
         //topnav[0].style.borderBottom = 'none';
     } else {
         //topnav[0].style.borderBottom = '25px solid #D7E0FF';
@@ -104,4 +104,3 @@ window.onclick = function(event) {
         event.target.style.display = 'none';
     }
 }
-
