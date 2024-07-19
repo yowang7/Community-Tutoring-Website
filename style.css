@@ -221,7 +221,7 @@ strong {
 /*-------------------------------------------------------------------------------*/
 /* Heading that isnt attached to top of page */
 .bigtext {
-  background-color: #D7E0FF;
+  background-color: rgb(54,94,235,0.2);
   text-align: center;
   font-size: 80px;
   color: #345EEB;
@@ -244,7 +244,7 @@ strong {
   position: absolute;
   width: 100%;
   height: 110%;
-  background: linear-gradient(335deg, transparent 49.6%, #345EEB 0.1%, #D7E0FF 50%);
+  background: linear-gradient(335deg, transparent 49.6%, #345EEB 0.1%, rgb(54,94,235,0.2) 50%);
 }
 
 .diagimage {
