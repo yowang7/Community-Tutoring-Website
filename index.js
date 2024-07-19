@@ -83,6 +83,8 @@ function addAnimation() {
   });
 }
 
+////////////////////////////////////////////////////////////////////////
+
 document.querySelectorAll('.openModal').forEach(button => {
     button.onclick = function() {
         const modalId = this.getAttribute('data-modal');

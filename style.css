@@ -129,12 +129,16 @@ strong {
 /*-------------------------------------------------------------------------------*/
 /* Footer basic styling */
 .footer {
-  display: flex;
-  text-align: left;
   width: 100%;
   background-color: #345EEB;
   color: white;
   font-size: 24px;
+}
+
+.footer-content {
+  display: flex;
+  width: 100%;
+  text-align: left;
 }
 
 .footer-section {
@@ -142,43 +146,48 @@ strong {
 }
 
 .left {
-  width: 40%;
+  width: 50%;
   border-right: 1px solid #fff;
-  text-align: left;
-}
-
-.middle {
-  width: 40%;
-  border-right: 1px solid #fff;
-  text-align: left;
-}
-
-.right {
-  width: 20%;
   text-align: center;
 }
 
+.right {
+  width: 50%;
+  text-align: left;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #fff;
+  padding: 10px 0;
+}
+
 @media (max-width: 768px) {
-  .footer {
-      flex-direction: column;
+  .footer-content {
+    flex-direction: column;
   }
 
   .footer-section {
-      width: 100%;
-      border-right: none;
-      border-bottom: 1px solid #fff;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #fff;
   }
 
   .footer-section:last-child {
-      border-bottom: none;
+    border-bottom: none;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #fff;
   }
 }
 
 .social-icon {
   color: #fff;
-  font-size: 100px;
+  font-size: 132%;
   text-decoration: none;
-  margin: 0 0 30px;
+  margin: 5% 5% 0;
 }
 
 .social-icon:hover {
@@ -186,9 +195,9 @@ strong {
   cursor: pointer;
 }
 
-.footer-text { 
+.footer-text {
   text-align: left;
-  margin-left: 10%;
+  margin-left: 20%;
   color: white;
   font-size: 20px;
   text-decoration: none;
@@ -204,9 +213,10 @@ strong {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  width: 30%;
   height: auto;
 }
+
 
 /*-------------------------------------------------------------------------------*/
 /* Heading that isnt attached to top of page */
@@ -224,7 +234,7 @@ strong {
   font-size: 60px;
   color: #345EEB;
   line-height: 100%;
-  padding-top: 20%;
+  padding-top: 10%;
   padding-left: 10%;
 }
 
@@ -475,6 +485,16 @@ p {
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
 }
+
+.scroller__inner a img {
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.scroller__inner a img:hover {
+  filter: grayscale(0%);
+}
+
 
 /*-------------------------------------------------------------------------------*/
 /*Bio Modals*/
