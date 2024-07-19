@@ -309,23 +309,40 @@ p {
 /*-------------------------------------------------------------------------------*/
 /* Statistics animation */
 .stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding-top: 30px;
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-bottom: 30px;
-  gap: 30px;
-  font-size: 50px;
-  font-weight: 10;
+  display: flex;
+  gap: 100px;
+  justify-content: center;
 }
 
-.counter {
-  transition: font-size 1s ease-in-out, text-shadow 1s ease;
+.subcount {
+  padding-top: 10%;
+  font-size: 60%;
 }
 
-.counter:hover {
-  font-size: 100px;
+.circle {
+  width: 50vw; /* Width set as a percentage of viewport width */
+  height: 50vw; /* Height set as a percentage of viewport width to ensure it's always a circle */
+  max-width: 350px; /* Maximum size */
+  max-height: 350px; /* Maximum size */
+  border: 3px green solid;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: green;
+  text-align: center;
+  padding: 10px;
+  font-size: 400%;
+  outline: green 3px solid;
+  outline-offset: -10px;
+}
+
+.greenbody {
+  background-color: rgb(0, 128, 0, 0.4);
+  color: green;
+  padding-top: 3%;
+  padding-bottom: 10%;
 }
 
 /*-------------------------------------------------------------------------------*/
