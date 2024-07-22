@@ -53,12 +53,14 @@ window.addEventListener('scroll', function() {
     const topnav = document.getElementsByClassName('topnav');
     if((335 + scrollAngle) < 360){
         diag.style.height = `${110 + window.scrollY / 6}%`;
+        diag.style.opacity = `${(370 - window.scrollY) / 370}`;
         diag.style.background = `linear-gradient(${335 + scrollAngle}deg, transparent 49.6%, #345EEB 0.1%, rgb(54,94,235,0.2) 50%)`;
         //topnav[0].style.borderBottom = 'none';
     } else {
         //topnav[0].style.borderBottom = '25px solid #D7E0FF';
     }
 });
+
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -112,3 +114,13 @@ document.querySelectorAll('.faq-item').forEach(item => {
       item.classList.toggle('active');
     });
   });
+
+// Auto Scroll Function
+window.onload = function() {
+    if (window.location.hash) {
+        let scrollAmount = parseInt(window.location.hash.substring(1));
+        if (!isNaN(scrollAmount)) {
+            window.scrollTo(0, scrollAmount);
+        }
+    }
+}
