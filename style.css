@@ -23,7 +23,7 @@ img {
 
 strong {
   color: #345EEB;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 
 /*-------------------------------------------------------------------------------*/
@@ -130,7 +130,7 @@ strong {
 /* Footer basic styling */
 .footer {
   width: 100%;
-  background-color: #345EEB;
+  background-color: #345eeb;
   color: white;
   font-size: 24px;
 }
@@ -151,8 +151,13 @@ strong {
   text-align: center;
 }
 
+.middle {
+  width: 25%;
+  text-align: left;
+}
+
 .right {
-  width: 50%;
+  width: 25%;
   text-align: left;
 }
 
@@ -161,6 +166,7 @@ strong {
   text-align: center;
   border-top: 1px solid #fff;
   padding: 10px 0;
+  line-height: 0px;
 }
 
 @media (max-width: 768px) {
@@ -187,7 +193,7 @@ strong {
   color: #fff;
   font-size: 132%;
   text-decoration: none;
-  margin: 5% 5% 0;
+  margin: 5% 1.5% 0;
 }
 
 .social-icon:hover {
@@ -311,7 +317,21 @@ p {
 .pgrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  position: relative;
 }
+
+/* Vertical Line
+.pgrid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: #345EEB;
+  z-index: 0;
+}
+*/
 
 /*-------------------------------------------------------------------------------*/
 /* Statistics animation */
@@ -343,6 +363,11 @@ p {
   font-size: 400%;
   outline: #345EEB 3px solid;
   outline-offset: -10px;
+  transition: font-size 1s ease;
+}
+
+.circle:hover {
+  font-size: 500%;
 }
 
 
