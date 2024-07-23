@@ -17,7 +17,7 @@ hr {
 }
 
 img {
-  height: 200px;
+  height: 300px;
   width: auto;
 }
 
@@ -130,8 +130,8 @@ strong {
 /* Footer basic styling */
 .footer {
   width: 100%;
-  background-color: #345eeb;
-  color: white;
+  background-color: rgb(54,94,235,0.2);
+  color: red;
   font-size: 24px;
 }
 
@@ -190,7 +190,7 @@ strong {
 }
 
 .social-icon {
-  color: #fff;
+  color: #345eeb;
   font-size: 132%;
   text-decoration: none;
   margin: 5% 1.5% 0;
@@ -204,14 +204,14 @@ strong {
 .footer-text {
   text-align: left;
   margin-left: 20%;
-  color: white;
+  color: #345eeb;
   font-size: 20px;
   text-decoration: none;
   margin: 10px;
 }
 
 .footer-text:hover {
-  color: #ccc;
+  color: #637df1;
   cursor: pointer;
 }
 
@@ -290,11 +290,12 @@ h4 {
 h5 {
   font-size: 50px;
   color: #345EEB;
+  margin: 5%;
 }
 
 h6 {
   font-size: 40px;
-  color: white;
+  color: #345eeb;
   margin-top: 5%;
   margin-bottom: 5%;
 }
@@ -467,7 +468,8 @@ p {
 /*-------------------------------------------------------------------------------*/
 /* Partners animation */
 .scroller {
-  max-width: 100vw;
+  max-width: 85vw;
+  margin: 0 auto;
 }
 
 .scroller__inner {
@@ -530,6 +532,8 @@ p {
 }
 
 .scroller__inner a img {
+  height: 150px;
+  width: auto;
   filter: grayscale(100%);
   transition: filter 0.3s;
 }
