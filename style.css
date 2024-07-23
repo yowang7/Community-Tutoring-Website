@@ -149,6 +149,8 @@ strong {
   width: 50%;
   border-right: 1px solid #fff;
   text-align: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
 .middle {
@@ -162,11 +164,12 @@ strong {
 }
 
 .footer-bottom {
-  width: 100%;
   text-align: center;
   border-top: 1px solid #fff;
   padding: 10px 0;
   line-height: 0px;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 
 @media (max-width: 768px) {
