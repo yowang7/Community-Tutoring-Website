@@ -647,3 +647,20 @@ p {
 .faq-item.active .faq-question .icon {
   transform: rotate(90deg);
 }
+
+/*------------------------------------------*/
+/* Location Window */
+.location-container {
+  padding: 5%;
+  display: flex;
+
+}
+
+.location-button-container {
+  width: 25%;
+}
+
+.location-stat-container {
+  width: 75%;
+  background-color: rgba(0, 0, 255, 0.1);
+}
