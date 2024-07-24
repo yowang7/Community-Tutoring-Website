@@ -660,6 +660,22 @@ p {
   width: 25%;
 }
 
+.location-button {
+  width: 40px;
+  height: 44px;
+  padding: 8px 12px;
+  background-color: transparent;
+  border: 2px solid #000; /* Optional: border to see the button */
+  border-radius: 10px; /* Adjust radius for rounded corners */
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+  text-align: center;
+  line-height: 28px; /* Adjust line height for vertical alignment */
+  font-size: 14px; /* Adjust font size as needed */
+  color: #000; /* Button text color */
+}
+
 .location-stat-container {
   width: 75%;
   background-color: rgba(0, 0, 255, 0.1);
