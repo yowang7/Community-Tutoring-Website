@@ -661,19 +661,19 @@ p {
 }
 
 .location-button {
-  width: 40px;
-  height: 44px;
-  padding: 8px 12px;
-  background-color: transparent;
-  border: 2px solid #000; /* Optional: border to see the button */
-  border-radius: 10px; /* Adjust radius for rounded corners */
-  cursor: pointer;
-  outline: none;
-  display: inline-block;
-  text-align: center;
-  line-height: 28px; /* Adjust line height for vertical alignment */
-  font-size: 14px; /* Adjust font size as needed */
-  color: #000; /* Button text color */
+  width: 100%;
+  height: 20%; /* 100 divided by the number of buttons */
+  background-color: rgba(0, 0, 255, 0.1);
+  color: #345EEB;
+  font-size: 14px;
+  border: 0px;
+  transition: all 0.4s ease-in-out;
+  font-family: 'Raleway', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.location-button:hover {
+  color: white;
+  background-color: #345EEB;
 }
 
 .location-stat-container {
