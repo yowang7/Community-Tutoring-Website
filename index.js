@@ -124,3 +124,31 @@ window.onload = function() {
         }
     }
 }
+
+//sections for the locations
+function showSection(city) {
+    const sections = document.querySelectorAll('.video-placeholder');
+    sections.forEach(section => {
+      section.style.display = 'none';
+    });
+  
+    const buttons = document.querySelectorAll('.location-button');
+    buttons.forEach(button => {
+      button.classList.remove('active-button');
+    });
+  
+    const activeSection = document.getElementById(`${city}-section`);
+    activeSection.style.display = 'flex';
+  
+    const activeButton = document.getElementById(`button-${city}`);
+    activeButton.classList.add('active-button');
+  }
+  
+  function onPageLoad() {
+    showSection('boston'); // You can change 'boston' to any other default section if needed
+  }
+  
+  // Add event listener for DOMContentLoaded
+  document.addEventListener('DOMContentLoaded', onPageLoad);
+  
+  

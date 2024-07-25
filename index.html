@@ -172,15 +172,25 @@
 
   <h2>Impact</h2>
   <div class="location-container">
-    <div class="location-button-container">
-      <button class="location-button">Boston</button><br>
-      <button class="location-button">Chicago</button><br>
-      <button class="location-button">New York City</button><br>
-      <button class="location-button">San Francisco</button><br>
-      <button class="location-button">Totals</button><br>
+    <div class="location-left">
+      <button class="location-button" id="button-boston" onclick="showSection('boston')">Boston</button>
+      <button class="location-button" id="button-newyork" onclick="showSection('newyork')">New York City</button>
+      <button class="location-button" id="button-chicago" onclick="showSection('chicago')">Chicago</button>
+      <button class="location-button" id="button-total" onclick="showSection('total')">Totals</button>
     </div>
-    <div class="location-stat-container">
-      [stats/video go here, still in progress]
+    <div class="location-right">
+      <div class="video-placeholder boston" id="boston-section">
+        <p>Section corresponding to Button 1 (Boston)</p>
+      </div>
+      <div class="video-placeholder newyork" id="newyork-section">
+        <p>Section corresponding to Button 2 (New York City)</p>
+      </div>
+      <div class="video-placeholder chicago" id="chicago-section">
+        <p>Section corresponding to Button 3 (Chicago)</p>
+      </div>
+      <div class="video-placeholder total" id="total-section">
+        <p>Section corresponding to Button 4 (Total)</p>
+      </div>
     </div>
   </div>
 
