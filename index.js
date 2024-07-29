@@ -150,6 +150,7 @@ function showSection(city) {
   
   // Add event listener for DOMContentLoaded
   document.addEventListener('DOMContentLoaded', onPageLoad);
+  
 
 ////////////////////////////////////////////////////////
 
