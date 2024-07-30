@@ -178,7 +178,7 @@ strong {
 /* Footer basic styling */
 .footer {
   width: 100%;
-  background-color: rgb(54,94,235,0.2);
+  background-color: #D7E0FF;
   color: #345EEB;
   font-size: 24px;
 }
@@ -309,6 +309,7 @@ strong {
   padding-left: 50%;
   height: 300px;
   width: 300px;
+  transform: translate(-20%, 20%);
 }
 
 
@@ -493,13 +494,16 @@ p {
   height: 100%;
   backface-visibility: hidden;
   /* Hides the back of the flipped element */
+  border-radius: 15px;
+  padding: 15px;
+  box-sizing: border-box;
 }
 
 .flip-box-front {
   display: grid;
   background-color: #D7E0FF;
-  border-radius: 16px;
   place-items: center;
+  text-align: center;
 }
 
 .flip-box-back {
@@ -508,9 +512,65 @@ p {
   color: white;
   transform: rotateY(180deg);
   /* Initially hidden, flipped state */
-  border-radius: 16px;
   place-items: center;
+  text-align: center;
 }
+
+.flip-box-back ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+  text-align: left;
+}
+
+.subject-sections {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .subjects {
+    display: none;
+  }
+
+  .subject-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Reduced gap between boxes */
+    padding: 15px;
+    align-items: center;
+  }
+
+  .subject-section {
+    background-color: #D7E0FF;
+    color: #345EEB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    width: 85%;
+    height: auto;
+    margin: 5px 0; /* Reduced margin between boxes */
+  }
+
+  .subject-header {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .subject-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0 0 0;
+  }
+
+  .subject-section ul li {
+    margin: 10px 0;
+  }
+}
+
 
 /*-------------------------------------------------------------------------------*/
 /* Partners animation */
@@ -715,7 +775,7 @@ p {
   width: 125px;
   height: 125px;
   border-radius: 25px;
-  background-color: rgba(0, 0, 255, 0.1);
+  background-color: #D7E0FF;
   color: #345EEB;
   font-size: 14px;
   border: 0px;
@@ -783,7 +843,7 @@ p {
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .location-container {
     flex-direction: column;
     height: auto;
@@ -812,6 +872,10 @@ p {
     height: 500px;
     padding: 10px;
     display: none;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
 
