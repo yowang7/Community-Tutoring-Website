@@ -115,6 +115,12 @@ document.querySelectorAll('.faq-item').forEach(item => {
     });
   });
 
+//subjects mobile view faq
+document.querySelectorAll('.subject-item').forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
 // Auto Scroll Function
 window.onload = function() {
     if (window.location.hash) {
@@ -160,6 +166,7 @@ function myFunction() {
     if (x.className === "topnav") {
       x.className += " responsive";
     } else {
-      x.className = "topnav";
+        x.className = "topnav";
     }
-  }
+}
+
