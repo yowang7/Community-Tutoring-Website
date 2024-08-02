@@ -48,7 +48,7 @@ strong {
   text-align: center;
   padding: 40px 32px;
   text-decoration: underline transparent;
-  transition: text-decoration 700ms ease;
+  transition: text-decoration 700ms ease, padding 1s ease-in-out, width 1s ease;
 }
 
 .topnav a.home {
@@ -82,7 +82,7 @@ strong {
   font-family: inherit;
   margin: 0;
   text-decoration: underline transparent;
-  transition: text-decoration 700ms ease;
+  transition: text-decoration 700ms ease, padding 1s ease-in-out;
 }
 
 .navbar a:hover,
@@ -131,8 +131,6 @@ strong {
   display: none;
 }
 
-
-
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 1200px) {
   .topnav a:not(:first-child), .dropdown .dropbtn {
@@ -141,37 +139,66 @@ strong {
   .topnav a.icon {
     float: right;
     display: block;
+    transition: all 800ms ease-in-out;
   }
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 1200px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw; /*Have to fix .home margin-left if adjusted*/
+    overflow: visible;
+  }
+
+  .topnav.responsive a.home {
+    background-color: white;
+    text-align: left;
+    width: 100vw;
+    padding: 24px;
+    left: 0;
+    margin-left: -96%; /*A little messy, kinda have to guess and check after adjusting topnav width*/
+    right: 0;
+    box-shadow: 0px 1px 24px #345EEB;
+  }
+
   .topnav.responsive a.icon {
     position: absolute;
     right: 0;
     top: 0;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 24px;
+    transform: rotate(180deg)
   }
+
   .topnav.responsive a {
     float: none;
     display: block;
-    text-align: left;
-    background-color: rgb(54,94,235,0.2);
+    text-align: right;
+    right: 0;
+    padding: 24px;
   }
-  .topnav.responsive .dropdown {float: none;}
-  .topnav.responsive .dropdown-content {position: relative;}
+
   .topnav.responsive .dropdown .dropbtn {
     display: block;
     width: 100%;
-    text-align: left;
-    background-color: rgb(54,94,235,0.2);
+    text-align: right;
+    padding: 24px;
+
   }
 
-  .topnav.responsive .home {
-    background-color: white;
+  .topnav.responsive .dropdown {
+    float: none;
+    text-align: right;
   }
-  
+
+  .topnav.responsive .dropdown-content {
+    position: relative;
+    text-align: right;
+    box-shadow: none;
+  }
 }
 
 /*-------------------------------------------------------------------------------*/
