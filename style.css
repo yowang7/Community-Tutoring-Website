@@ -219,6 +219,20 @@ strong {
   .topnav.responsive .dropdown-content a:hover {
     background-color: rgb(54,94,235,0.7);   
   }
+
+  @media screen and (max-width: 400px) {
+    .topnav.responsive .dropbtn, 
+    .topnav.responsive a {
+      font-size: 15px;
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    
+    .topnav.responsive .dropdown-content a {
+      font-size: 15px;
+      padding: 24px;
+    }
+  }
 }
 
 /*-------------------------------------------------------------------------------*/
