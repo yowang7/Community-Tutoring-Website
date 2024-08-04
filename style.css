@@ -163,7 +163,7 @@ strong {
     width: 100vw;
     padding: 24px;
     left: 0;
-    margin-left: -68.5vw; /*A little messy, kinda have to guess and check after adjusting topnav width*/
+    margin-left: -70vw; /*A little messy, kinda have to guess and check after adjusting topnav width*/
     right: 0;
     box-shadow: 0px 1px 24px #345EEB;
     color: #345EEB;
@@ -212,9 +212,12 @@ strong {
     background-color: rgb(54,94,235,0.4);
   }
 
+  .topnav.responsive .dropdown-content a {
+    text-align: left;
+  }
+
   .topnav.responsive .dropdown-content a:hover {
     background-color: rgb(54,94,235,0.7);   
-    color: white;
   }
 }
 
