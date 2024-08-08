@@ -133,29 +133,30 @@ window.onload = function() {
 
 //sections for the locations
 function showSection(city) {
-    const sections = document.querySelectorAll('.video-placeholder');
+    const sections = document.querySelectorAll('.location-stats-image');
     sections.forEach(section => {
-      section.style.display = 'none';
+        section.style.display = 'none'; // Hide all sections
     });
-  
+
     const buttons = document.querySelectorAll('.location-button');
     buttons.forEach(button => {
-      button.classList.remove('active-button');
+        button.classList.remove('active-button'); // Remove active class from all buttons
     });
-  
+
     const activeSection = document.getElementById(`${city}-section`);
-    activeSection.style.display = 'flex';
-  
+    activeSection.style.display = 'flex'; // Show the selected section
+
     const activeButton = document.getElementById(`button-${city}`);
-    activeButton.classList.add('active-button');
-  }
-  
-  function onPageLoad() {
-    showSection('boston'); // You can change 'boston' to any other default section if needed
-  }
-  
-  // Add event listener for DOMContentLoaded
-  document.addEventListener('DOMContentLoaded', onPageLoad);
+    activeButton.classList.add('active-button'); // Add active class to the clicked button
+}
+
+function onPageLoad() {
+    showSection('boston'); // Show the Boston section by default when the page loads
+}
+
+// Add event listener for DOMContentLoaded
+document.addEventListener('DOMContentLoaded', onPageLoad);
+
   
 
 ////////////////////////////////////////////////////////
