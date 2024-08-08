@@ -418,9 +418,10 @@ h6 {
 /*-------------------------------------------------------------------------------*/
 /* Paragraph basic style */
 p {
+  font-family: "Merriweather", serif;
   text-align: center;
   font-size: 20px;
-  color: #345EEB;
+  color: #000000;
   padding-left: 5%;
   padding-right: 5%;
 }
