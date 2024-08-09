@@ -380,12 +380,22 @@ strong {
   background: linear-gradient(335deg, transparent 49.6%, #345EEB 0.1%, rgb(54,94,235,0.2) 50%);
 }
 
-.diagimage {
+.diagimage img{
   padding-top: 30%;
   padding-left: 50%;
-  height: 300px;
-  width: 300px;
-  transform: translate(-20%, 20%);
+  height: 420px;
+  width: auto;
+  transform: translate(-20%, 5%);
+}
+
+@media (max-width: 1000px) {
+  .optional {
+    display: none;
+  }
+
+  .diagimage img {
+    display: none;
+  }
 }
 
 
@@ -822,6 +832,7 @@ p {
 .faq-question {
   display: flex;
   align-items: center;
+  text-align: left;
   font-size: 18px;
 }
 .faq-question .icon {
