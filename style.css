@@ -244,8 +244,8 @@ strong {
 :target::before {
   content: "";
   display: block;
-  height: 113px; /* Adjust this to the height of your fixed navbar */
-  margin-top: -113px; /* Same value as above */
+  height: 120px; /* Adjust this to the height of your fixed navbar */
+  margin-top: -120px; /* Same value as above */
 }
 
 /*-------------------------------------------------------------------------------*/
