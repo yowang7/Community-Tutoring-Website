@@ -241,6 +241,13 @@ strong {
   }
 }
 
+:target::before {
+  content: "";
+  display: block;
+  height: 113px; /* Adjust this to the height of your fixed navbar */
+  margin-top: -113px; /* Same value as above */
+}
+
 /*-------------------------------------------------------------------------------*/
 /* Footer basic styling */
 .footer {
@@ -337,7 +344,9 @@ strong {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 30%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  width: 50%;
   height: auto;
 }
 
