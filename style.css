@@ -10,6 +10,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   overflow-x: hidden;
+  width: 100vw;
 }
 
 hr {
