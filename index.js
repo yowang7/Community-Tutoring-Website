@@ -59,7 +59,7 @@ window.addEventListener('scroll', function() {
     }
 
     if((335 + scrollAngle) < 360){
-        diag.style.height = `${hght + window.scrollY / 6}%`;
+        diag.style.height = `${hght + window.scrollY / (660 / hght)}%`;
         diag.style.opacity = `${(370 - window.scrollY) / 370}`;
         diag.style.background = `linear-gradient(${335 + scrollAngle}deg, transparent 49.6%, #345EEB 0.1%, rgb(54,94,235,0.2) 50%)`;
         //topnav[0].style.borderBottom = 'none';
