@@ -10,7 +10,6 @@ body {
   background-attachment: fixed;
   background-size: cover;
   overflow-x: hidden;
-  width: 100vw;
 }
 
 hr {
@@ -376,6 +375,8 @@ strong {
   padding-left: 10%;
 }
 
+.diagtext h4 { font-size: 24px;}
+
 .diag {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -397,25 +398,40 @@ strong {
   .optional {
     display: none;
   }
-
   .diagimage img {
     display: none;
   }
-
   .diag {
     grid-template-columns: 1fr;
     height: 40%;
   }
-
-  .diagtext br {
-    display: none;
-  }
-
-  .spacer {
-    display: none;
-  }
+  .diagtext br {display: none;}
+  .diagtext {font-size: 9vw;}
+  .spacer {max-height: 9vh;}
 }
 
+@media (max-width: 600px) {
+  .optional {
+    display: none;
+  }
+  .diagimage img {
+    display: none;
+  }
+  .diag {
+    grid-template-columns: 1fr;
+    height: 40%;
+  }
+  .diagtext br {display: none;}
+  .diagtext {font-size: 9vw;}
+  .diagtext h4 {
+    font-size: 4vw;
+    padding-top: 4vh;
+    width: 50%;
+    text-align: right;
+    transform: translateX(90%);
+  }
+  .spacer {display: none;}
+}
 
 /*-------------------------------------------------------------------------------*/
 /* Subheadings basic style */
@@ -784,6 +800,11 @@ p {
   filter: grayscale(0%);
 }
 
+@media (max-width: 600px) {
+  .scroller__inner a img {
+    height: 90px;
+  }
+}
 
 /*-------------------------------------------------------------------------------*/
 /*Bio Modals*/
