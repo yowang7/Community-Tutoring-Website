@@ -456,6 +456,24 @@ p {
   position: relative;
 }
 
+@media screen and (max-width: 800px) {
+  .pgrid {
+    grid-template-columns: 1fr;
+  }  
+  .aboutus-1 {order: 0;}
+  .aboutdesc-1 {order: 1;}
+  .aboutus-2 {order: 2;}
+  .aboutdesc-2 {order: 3;}
+
+  .pgrid p {
+    font-size: 4vw
+  }
+
+  .pgrid h3 {
+    font-size: 10vw;
+  }
+}
+
 /* Vertical Line
 .pgrid::before {
   content: '';
