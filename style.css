@@ -396,6 +396,19 @@ strong {
   .diagimage img {
     display: none;
   }
+
+  .diag {
+    grid-template-columns: 1fr;
+    height: 40%;
+  }
+
+  .diagtext br {
+    display: none;
+  }
+
+  .spacer {
+    display: none;
+  }
 }
 
 
