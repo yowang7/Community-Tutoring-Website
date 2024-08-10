@@ -48,11 +48,18 @@ document.addEventListener('DOMContentLoaded', () => {
 ////////////////////////////////////////////////////////////////////////
 
 window.addEventListener('scroll', function() {
+    let hght = 110;
     const scrollAngle = window.scrollY / 15; // Adjust divisor for speed of rotation
     const diag = document.getElementById('diag');
     const topnav = document.getElementsByClassName('topnav');
+    if (window.innerWidth <= 1000) {
+        hght = 40;
+    } else {
+        hght = 110;
+    }
+
     if((335 + scrollAngle) < 360){
-        diag.style.height = `${110 + window.scrollY / 6}%`;
+        diag.style.height = `${hght + window.scrollY / 6}%`;
         diag.style.opacity = `${(370 - window.scrollY) / 370}`;
         diag.style.background = `linear-gradient(${335 + scrollAngle}deg, transparent 49.6%, #345EEB 0.1%, rgb(54,94,235,0.2) 50%)`;
         //topnav[0].style.borderBottom = 'none';
