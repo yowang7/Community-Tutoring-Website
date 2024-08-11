@@ -264,6 +264,8 @@ strong {
 .footer-content {
   display: flex;
   width: 100%;
+  max-width: 100%; /* Ensure no content exceeds the viewport width */
+  overflow-x: hidden; /* Hide any potential overflow within footer content */
   text-align: left;
 }
 
@@ -274,7 +276,12 @@ strong {
 .left {
   width: 50%;
   border-right: 1px solid #fff;
-  text-align: center;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Center text or inline elements within their containers */
+  flex-direction: column; /* Stack items vertically, if desired */
+  height: 100%; 
   margin-top: 1%;
   margin-bottom: 1%;
 }
@@ -301,12 +308,17 @@ strong {
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
+    column-width: 1fr;
   }
-
+  
   .footer-section {
     width: 100%;
     border-right: none;
     border-bottom: 1px solid #fff;
+  }
+  
+  .left {
+    align-items: center;
   }
 
   .footer-section:last-child {
@@ -318,11 +330,19 @@ strong {
   }
 }
 
+.social-icon-container{
+  width: 100%; /* Ensure the container takes up the full width of its parent */
+  overflow-x: hidden; /* Hide any potential horizontal overflow */
+  padding: 0; /* Remove padding */
+  margin: 0 auto; /* Center the container within its parent */
+}
+
 .social-icon {
+  display: inline-block; /* Ensure the icons are treated as inline elements */
+  margin: 0 5%; /* Adjust horizontal spacing between icons */
   color: #345eeb;
   font-size: 132%;
   text-decoration: none;
-  margin: 5% 1.5% 0;
 }
 
 .social-icon:hover {
@@ -348,6 +368,7 @@ strong {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  align-items: center;
   margin-top: 1%;
   margin-bottom: 1%;
   width: 50%;
@@ -441,6 +462,12 @@ h2 {
   color: #345EEB;
   line-height: 1.5;
   margin: 2.5%;
+}
+
+@media (max-width: 600px) {
+  h2{
+    font-size: 60px;
+  }
 }
 
 h3 {
@@ -790,7 +817,7 @@ p {
 }
 
 .scroller__inner a img {
-  height: 150px;
+  height: 120px;
   width: auto;
   filter: grayscale(100%);
   transition: filter 0.3s;
