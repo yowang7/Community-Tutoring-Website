@@ -52,7 +52,9 @@ window.addEventListener('scroll', function() {
     const scrollAngle = window.scrollY / 15; // Adjust divisor for speed of rotation
     const diag = document.getElementById('diag');
     const topnav = document.getElementsByClassName('topnav');
-    if (window.innerWidth <= 1000) {
+    if (window.innerWidth <= 1000 && window.innerWidth >= 788) {
+        hght = 50;
+    } else if (window.innerWidth < 788){
         hght = 40;
     } else {
         hght = 110;
