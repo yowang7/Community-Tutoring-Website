@@ -32,6 +32,9 @@ strong {
 .topnav {
   overflow: hidden;
   background-color: white;
+  /*rgba(255, 255, 255, 0);*/
+  /*backdrop-filter: blur(10px); /* Blur effect */
+  /*-webkit-backdrop-filter: blur(10px);*/
   position: sticky;
   top: 0px;
   box-shadow: 0px 1px 24px #345EEB;
@@ -50,6 +53,7 @@ strong {
 
 .topnav a.home {
   background-color: white;
+  /*rgba(255, 255, 255, 0);*/
   color: #345EEB;
   text-align: center;
   padding: 40px 32px;
@@ -133,7 +137,7 @@ strong {
   padding-right: 25px;
 }
 
-/* Responsive Design */
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 1200px) {
   .topnav a:not(:first-child), .dropdown .dropbtn {
     display: none;
@@ -149,17 +153,18 @@ strong {
   }
 }
 
-/* Responsive Navbar */
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 1200px) {
   .topnav.responsive {
     position: fixed;
     top: 0;
     right: 0;
-    width: 30vw; /* Adjust width */
+    width: 30vw; /*Have to fix .home margin-left if adjusted*/
     overflow: visible;
     height: 100vh;
     background-color: rgb(54,94,235,0.4);
     backdrop-filter: blur(15px);
+    
   }
 
   .topnav.responsive a.home {
@@ -168,7 +173,7 @@ strong {
     width: 100vw;
     padding: 24px;
     left: 0;
-    margin-left: -70vw; /* Adjust margin */
+    margin-left: -70vw; /*A little messy, kinda have to guess and check after adjusting topnav width*/
     right: 0;
     box-shadow: 0px 1px 24px #345EEB;
     color: #345EEB;
@@ -181,7 +186,7 @@ strong {
     background-color: rgba(255, 255, 255, 0);
     color: #345EEB;
     padding: 24px;
-    transform: rotate(180deg);
+    transform: rotate(180deg)
   }
 
   .topnav.responsive a {
@@ -189,18 +194,11 @@ strong {
     display: block;
     text-align: right;
     right: 0;
-    padding: 12px 24px; /* Reduced padding for smaller vertical spacing */
+    padding: 24px;
     color: white;
   }
 
-  /* Reordering elements */
-  .topnav.responsive a[href="team.html"] { order: 1; } /* Our Team */
-  .topnav.responsive .dropdown:nth-of-type(2) { order: 2; } /* Get Involved */
-  .topnav.responsive a[href="https://www.gofundme.com/f/raising-money-to-put-towards-improving-tutoring"] { order: 3; } /* Support Us */
-  .topnav.responsive .dropdown:nth-of-type(1) { order: 4; } /* Communities */
-
-  .topnav.responsive a:hover, 
-  .topnav.responsive .dropbtn:hover {
+  .topnav.responsive a:hover, .topnav.responsive .dropbtn:hover {
     text-decoration-color: white;
   }
 
@@ -208,7 +206,7 @@ strong {
     display: block;
     width: 100%;
     text-align: right;
-    padding: 12px 24px; /* Reduced padding */
+    padding: 24px;
     color: white;
   }
 
@@ -222,6 +220,7 @@ strong {
     text-align: right;
     box-shadow: none;
     background-color: rgb(54,94,235,0.4);
+    min-width: none;
   }
 
   .topnav.responsive .dropdown-content a {
@@ -254,7 +253,6 @@ strong {
   margin-top: -120px; /* Same value as above */
 }
 
-
 /*-------------------------------------------------------------------------------*/
 /* Footer basic styling */
 .footer {
@@ -267,8 +265,6 @@ strong {
 .footer-content {
   display: flex;
   width: 100%;
-  max-width: 100%; /* Ensure no content exceeds the viewport width */
-  overflow-x: hidden; /* Hide any potential overflow within footer content */
   text-align: left;
 }
 
@@ -279,12 +275,7 @@ strong {
 .left {
   width: 50%;
   border-right: 1px solid #fff;
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  text-align: center; /* Center text or inline elements within their containers */
-  flex-direction: column; /* Stack items vertically, if desired */
-  height: 100%; 
+  text-align: center;
   margin-top: 1%;
   margin-bottom: 1%;
 }
@@ -311,17 +302,12 @@ strong {
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
-    column-width: 1fr;
   }
-  
+
   .footer-section {
     width: 100%;
     border-right: none;
     border-bottom: 1px solid #fff;
-  }
-  
-  .left {
-    align-items: center;
   }
 
   .footer-section:last-child {
@@ -333,19 +319,11 @@ strong {
   }
 }
 
-.social-icon-container{
-  width: 100%; /* Ensure the container takes up the full width of its parent */
-  overflow-x: hidden; /* Hide any potential horizontal overflow */
-  padding: 0; /* Remove padding */
-  margin: 0 auto; /* Center the container within its parent */
-}
-
 .social-icon {
-  display: inline-block; /* Ensure the icons are treated as inline elements */
-  margin: 0 5%; /* Adjust horizontal spacing between icons */
   color: #345eeb;
   font-size: 132%;
   text-decoration: none;
+  margin: 5% 1.5% 0;
 }
 
 .social-icon:hover {
@@ -371,7 +349,6 @@ strong {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  align-items: center;
   margin-top: 1%;
   margin-bottom: 1%;
   width: 50%;
@@ -427,8 +404,10 @@ strong {
   }
   .diag {
     grid-template-columns: 1fr;
-    height: 40%;
+    height: 50%;
   }
+  @media (max-width: 788px){ .diag {height: 40%;}}
+  
   .diagtext br {display: none;}
   .diagtext {font-size: 9vw;}
   .spacer {max-height: 9vh;}
@@ -465,12 +444,6 @@ h2 {
   color: #345EEB;
   line-height: 1.5;
   margin: 2.5%;
-}
-
-@media (max-width: 600px) {
-  h2{
-    font-size: 60px;
-  }
 }
 
 h3 {
@@ -820,7 +793,7 @@ p {
 }
 
 .scroller__inner a img {
-  height: 120px;
+  height: 150px;
   width: auto;
   filter: grayscale(100%);
   transition: filter 0.3s;
