@@ -50,7 +50,6 @@ strong {
 
 .topnav a.home {
   background-color: white;
-  font-family: 'Raleway';
   color: #345EEB;
   text-align: center;
   padding: 40px 32px;
@@ -307,6 +306,11 @@ strong {
   line-height: 0px;
   margin-left: 1%;
   margin-right: 1%;
+}
+
+.footer-bottom p {
+  color: #637df1; 
+  margin-bottom: 30px;
 }
 
 @media (max-width: 768px) {
