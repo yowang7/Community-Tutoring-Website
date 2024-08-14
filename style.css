@@ -1,7 +1,7 @@
 /*Basic fonts/background for entire body of page */
 body {
   margin: 0;
-  font-family: 'Raleway', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Raleway';
   color: #345EEB;
   text-align: center;
   line-height: 200%;
@@ -50,6 +50,7 @@ strong {
 
 .topnav a.home {
   background-color: white;
+  font-family: 'Raleway';
   color: #345EEB;
   text-align: center;
   padding: 40px 32px;
