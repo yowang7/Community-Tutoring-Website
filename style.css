@@ -236,8 +236,6 @@ strong {
     .topnav.responsive .dropbtn, 
     .topnav.responsive a {
       font-size: 15px;
-      padding-top: 100px;
-      padding-bottom: 100px;
     }
     
     .topnav.responsive .dropdown-content a {
