@@ -11,7 +11,13 @@ body {
   background-size: cover;
   overflow-x: hidden;
 }
-
+/*
+@media (max-width: 1024px) {
+  body {
+      background-attachment: fixed;
+  }
+}
+*/
 hr {
   border: 2px solid #345EEB;
   margin: 8%;
@@ -160,6 +166,7 @@ strong {
     height: 100vh;
     background-color: rgb(54,94,235,0.4);
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px)
   }
 
   .topnav.responsive a.home {
@@ -539,18 +546,6 @@ p {
   }
 }
 
-/* Vertical Line
-.pgrid::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 2px;
-  background-color: #345EEB;
-  z-index: 0;
-}
-*/
 
 /*-------------------------------------------------------------------------------*/
 /* Statistics animation */
