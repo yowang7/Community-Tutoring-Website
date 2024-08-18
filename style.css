@@ -1,7 +1,6 @@
-/*Basic fonts/background for entire body of page */
 body {
   margin: 0;
-  font-family: 'Raleway', 'Merriweather';
+  font-family: 'Raleway', 'Merriweather', sans-serif;
   color: #345EEB;
   text-align: center;
   line-height: 200%;
@@ -9,28 +8,29 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg fill-opacity='0.73'%3E%3Cpath fill='%23fafafa' d='M486 705.8c-109.3-21.8-223.4-32.2-335.3-19.4C99.5 692.1 49 703 0 719.8V800h843.8c-115.9-33.2-230.8-68.1-347.6-92.2C492.8 707.1 489.4 706.5 486 705.8z'/%3E%3Cpath fill='%23f5f5f5' d='M1600 0H0v719.8c49-16.8 99.5-27.8 150.7-33.5c111.9-12.7 226-2.4 335.3 19.4c3.4 0.7 6.8 1.4 10.2 2c116.8 24 231.7 59 347.6 92.2H1600V0z'/%3E%3Cpath fill='%23f1f1f1' d='M478.4 581c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v574.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 537.4 375.7 554.2 478.4 581z'/%3E%3Cpath fill='%23ececec' d='M0 0v429.4c55.6-18.4 113.5-27.3 171.4-27.7c102.8-0.8 203.2 22.7 299.3 54.5c3 1 5.9 2 8.9 3c183.6 62 365.7 146.1 562.4 192.1c186.7 43.7 376.3 34.4 557.9-12.6V0H0z'/%3E%3Cpath fill='%23E7E7E7' d='M181.8 259.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v283.2C59 263.6 120.6 255.7 181.8 259.4z'/%3E%3Cpath fill='%23ececec' d='M1600 0H0v136.3c62.3-20.9 127.7-27.5 192.2-19.2c93.6 12.1 180.5 47.7 263.3 89.6c2.6 1.3 5.1 2.6 7.7 3.9c158.4 81.1 319.7 170.9 500.3 223.2c210.5 61 430.8 49 636.6-16.6V0z'/%3E%3Cpath fill='%23f1f1f1' d='M454.9 86.3C600.7 177 751.6 269.3 924.1 325c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 83.4 452.5 84.9 454.9 86.3z'/%3E%3Cpath fill='%23f5f5f5' d='M1600 0H498c118.1 85.8 243.5 164.5 386.8 216.2c191.8 69.2 400 74.7 595 21.1c40.8-11.2 81.1-25.2 120.3-41.7V0z'/%3E%3Cpath fill='%23fafafa' d='M1397.5 154.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 178.1 1214.2 196.1 1397.5 154.8z'/%3E%3Cpath fill='%23FFFFFF' d='M1315.3 72.4c75.3-12.6 148.9-37.1 216.8-72.4h-723C966.8 71 1144.7 101 1315.3 72.4z'/%3E%3C/g%3E%3C/svg%3E");
   background-attachment: fixed;
   background-size: cover;
+  background-repeat: no-repeat;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-/*
-@media (max-width: 1024px) {
-  body {
-      background-attachment: fixed;
-  }
-}
-*/
+
 hr {
   border: 2px solid #345EEB;
   margin: 8%;
+  border-radius: 1px; /* Adding border-radius for a smoother look */
 }
 
 img {
   height: 300px;
   width: auto;
+  backface-visibility: hidden; /* Standard backface-visibility */
+  -webkit-backface-visibility: hidden; /* Fix for image flickering in WebKit browsers */
+  -ms-interpolation-mode: bicubic; /* Improves image rendering in IE */
 }
 
 strong {
   color: #345EEB;
-  /*text-decoration: underline;*/
+  font-weight: bold;
 }
 
 /*-------------------------------------------------------------------------------*/
@@ -39,7 +39,7 @@ strong {
   overflow: hidden;
   background-color: white;
   position: sticky;
-  top: 0px;
+  top: 0;
   box-shadow: 0px 1px 24px #345EEB;
   z-index: 1;
   font-size: 24px;
@@ -52,6 +52,7 @@ strong {
   padding: 40px 32px;
   text-decoration: underline transparent;
   transition: text-decoration 700ms ease, padding 1s ease-in-out, width 1s ease;
+  -webkit-transition: text-decoration 700ms ease, padding 1s ease-in-out, width 1s ease; /* For Safari */
 }
 
 .topnav a.home {
@@ -85,6 +86,7 @@ strong {
   margin: 0;
   text-decoration: underline transparent;
   transition: text-decoration 700ms ease, padding 1s ease-in-out;
+  -webkit-transition: text-decoration 700ms ease, padding 1s ease-in-out; /* For Safari */
 }
 
 .navbar a:hover,
@@ -122,10 +124,12 @@ strong {
 
 .fa {
   transition: transform 500ms;
+  -webkit-transition: transform 500ms; /* For Safari */
 }
 
 .dropdown:hover .fa {
   transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg); /* For Safari */
 }
 
 /* Hide the link that should open and close the topnav on small screens */
@@ -148,6 +152,7 @@ strong {
     float: right;
     display: block;
     transition: all 800ms ease-in-out;
+    -webkit-transition: all 800ms ease-in-out; /* For Safari */
   }
   .topnav a.home {
     font-size: 4vw;
@@ -164,9 +169,9 @@ strong {
     width: 30vw; /* Adjust width */
     overflow: visible;
     height: 100vh;
-    background-color: rgb(54,94,235,0.4);
+    background-color: rgba(54, 94, 235, 0.4);
     backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px)
+    -webkit-backdrop-filter: blur(15px); /* For Safari */
   }
 
   .topnav.responsive a.home {
@@ -189,6 +194,7 @@ strong {
     color: #345EEB;
     padding: 24px;
     transform: rotate(180deg);
+    -webkit-transform: rotate(180deg); /* For Safari */
   }
 
   .topnav.responsive a {
@@ -228,7 +234,7 @@ strong {
     position: relative;
     text-align: right;
     box-shadow: none;
-    background-color: rgb(54,94,235,0.4);
+    background-color: rgba(54, 94, 235, 0.4);
   }
 
   .topnav.responsive .dropdown-content a {
@@ -236,7 +242,7 @@ strong {
   }
 
   .topnav.responsive .dropdown-content a:hover {
-    background-color: rgb(54,94,235,0.7);   
+    background-color: rgba(54, 94, 235, 0.7);   
   }
 
   @media screen and (max-width: 400px) {
@@ -386,7 +392,6 @@ strong {
 
 
 /*-------------------------------------------------------------------------------*/
-
 .diagtext {
   text-align: left;
   font-size: 60px;
@@ -396,7 +401,9 @@ strong {
   padding-left: 10%;
 }
 
-.diagtext h4 { font-size: 24px;}
+.diagtext h4 {
+  font-size: 24px;
+}
 
 .diag {
   display: grid;
@@ -407,13 +414,13 @@ strong {
   background: linear-gradient(335deg, transparent 49.6%, #345EEB 0.1%, rgba(54, 94, 235, 0.2) 50%);
 }
 
-
-.diagimage img{
+.diagimage img {
   padding-top: 30%;
   padding-left: 50%;
   height: 420px;
   width: auto;
   transform: translate(-20%, 5%);
+  -webkit-transform: translate(-20%, 5%); /* For Safari */
 }
 
 @media (max-width: 1000px) {
@@ -427,11 +434,15 @@ strong {
     grid-template-columns: 1fr;
     height: 50%;
   }
-  @media (max-width: 788px){ .diag {height: 40%;}}
-
-  .diagtext br {display: none;}
-  .diagtext {font-size: 9vw;}
-  .spacer {max-height: 9vh;}
+  .diagtext br {
+    display: none;
+  }
+  .diagtext {
+    font-size: 9vw;
+  }
+  .spacer {
+    max-height: 9vh;
+  }
 }
 
 @media (max-width: 600px) {
@@ -445,16 +456,23 @@ strong {
     grid-template-columns: 1fr;
     height: 40%;
   }
-  .diagtext br {display: none;}
-  .diagtext {font-size: 9vw;}
+  .diagtext br {
+    display: none;
+  }
+  .diagtext {
+    font-size: 9vw;
+  }
   .diagtext h4 {
     font-size: 4vw;
     padding-top: 4vh;
     width: 50%;
     text-align: right;
     transform: translateX(90%);
+    -webkit-transform: translateX(90%); /* For Safari */
   }
-  .spacer {display: none;}
+  .spacer {
+    display: none;
+  }
 }
 
 /*-------------------------------------------------------------------------------*/
@@ -505,8 +523,7 @@ p {
   text-align: center;
   font-size: 20px;
   color: #000000;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 0 5%;
 }
 
 .indent {
@@ -517,26 +534,33 @@ p {
 .pgrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 2rem; /* Added gap for better spacing between columns */
   position: relative;
+  padding: 2rem 0; /* Added padding for consistent spacing around the section */
 }
 
 @media screen and (max-width: 800px) {
   .pgrid {
     grid-template-columns: 1fr;
-  }  
-  .aboutus-1 {order: 0;}
-  .aboutdesc-1 {order: 1;}
-  .aboutus-2 {order: 2;}
-  .aboutdesc-2 {order: 3;}
+    gap: 1.5rem; /* Adjusted gap for smaller screens */
+  }
+
+  .aboutus-1 { order: 0; }
+  .aboutdesc-1 { order: 1; }
+  .aboutus-2 { order: 2; }
+  .aboutdesc-2 { order: 3; }
 
   .pgrid p {
-    font-size: 4vw
+    font-size: 4vw;
+    padding: 0 8%; /* Increased padding for readability on smaller screens */
   }
 
   .pgrid h3 {
-    font-size: 10vw;
+    font-size: 8vw; /* Reduced font size for better heading visibility */
+    margin-bottom: 1rem; /* Added margin for spacing */
   }
 }
+
 /*-------------------------------------------------------------------------------*/
 /* Our team grid style */
 .team {
@@ -583,33 +607,25 @@ p {
 /* Subjects list style */
 .subjects {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-bottom: 30px;
-  padding-top: 30px;
+  padding: 30px 10%;
 }
 
 .flip-box {
-  width: 100%;
   height: 300px;
   perspective: 1000px;
-  /* Adds perspective for 3D effect */
 }
 
 .flip-box-inner {
-  position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s;
+  transition: transform 0.6s ease;
   transform-style: preserve-3d;
-  /* Allows for 3D transformations */
 }
 
 .flip-box:hover .flip-box-inner {
   transform: rotateY(180deg);
-  /* Flips the box on hover */
 }
 
 .flip-box-front,
@@ -618,26 +634,26 @@ p {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  /* Hides the back of the flipped element */
   border-radius: 15px;
   padding: 15px;
   box-sizing: border-box;
 }
 
 .flip-box-front {
-  display: grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #D7E0FF;
-  place-items: center;
   text-align: center;
 }
 
 .flip-box-back {
-  display: grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #345EEB;
   color: white;
   transform: rotateY(180deg);
-  /* Initially hidden, flipped state */
-  place-items: center;
   text-align: center;
 }
 
@@ -664,41 +680,45 @@ p {
     padding: 20px;
     max-width: 80%;
     margin: 20px auto;
-    width: 80%;
-    height: auto;
   }
+
   .subject-item {
     border-bottom: 1px solid #ccc;
     padding: 10px 0;
     cursor: pointer;
   }
+
   .subject-item:last-child {
     border-bottom: none;
   }
+
   .subject-header {
     display: flex;
     align-items: center;
     font-size: 18px;
   }
+
   .subject-header .icon {
     margin-right: 10px;
     transition: transform 0.3s;
   }
+
   .subject-list {
     display: none;
     padding-left: 26px;
     margin-top: 10px;
     font-size: 16px;
-    text-align: left;
   }
+
   .subject-item.active .subject-list {
     display: block;
   }
-  .subject-item.active .subject-question .icon {
+
+  .subject-item.active .icon {
     transform: rotate(90deg);
   }
-  
 }
+
 
 
 /*-------------------------------------------------------------------------------*/
@@ -706,12 +726,14 @@ p {
 .scroller {
   max-width: 85vw;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .scroller__inner {
   padding-block: 1rem;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -726,6 +748,7 @@ p {
 }
 
 .scroller[data-animated="true"] .scroller__inner {
+  padding: 1rem 0;
   width: max-content;
   flex-wrap: nowrap;
   animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
@@ -748,30 +771,30 @@ p {
 }
 
 @keyframes scroll {
-  to {
-    transform: translate(calc(-50% - 1rem));
+  100% {
+    transform: translateX(calc(-50% - 1rem));
   }
 }
 
 .tag-list {
-  place-content: center;
-  margin: 0;
-  padding-inline: 0;
   list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  place-content: center;
 }
 
 .tag-list li {
-  padding: 1rem;
-  background: var(--clr-primary-400);
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .scroller__inner a img {
   height: 120px;
   width: auto;
   filter: grayscale(100%);
-  transition: filter 0.3s;
+  transition: filter 0.3s ease;
 }
 
 .scroller__inner a img:hover {

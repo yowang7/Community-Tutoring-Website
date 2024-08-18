@@ -130,3 +130,46 @@ function myFunction() {
     }
 }
 
+document.addEventListener('scroll', function() {
+    // Only adjust scroll position if horizontal scroll is detected
+    if (window.scrollX > 0) {
+      window.requestAnimationFrame(() => {
+        // Smoothly scroll back to the original position
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth' // Smooth scroll back
+        });
+      });
+    }
+  });
+
+  // Function to prevent horizontal scrolling
+function preventHorizontalScroll() {
+    // Check if there is any horizontal scroll
+    if (window.scrollX > 0) {
+      // Smoothly scroll back to the left edge
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth' // Optional: smooth scroll back
+      });
+    }
+  }
+  
+  // Add an event listener for scroll events
+  window.addEventListener('scroll', preventHorizontalScroll, { passive: true });
+  
+  // Add a listener for resize events to ensure no horizontal overflow on resize
+  window.addEventListener('resize', () => {
+    if (window.scrollX > 0) {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+  });
+  
+  
+
