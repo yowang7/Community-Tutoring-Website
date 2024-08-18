@@ -21,7 +21,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-
 ////////////////////////////////////////////////////////////////////////
 
 const scrollers = document.querySelectorAll(".scroller");
