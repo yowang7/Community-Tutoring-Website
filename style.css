@@ -1,7 +1,7 @@
 /*Basic fonts/background for entire body of page */
 body {
   margin: 0;
-  font-family: 'Merriweather';
+  font-family: 'Raleway', 'Merriweather';
   color: #345EEB;
   text-align: center;
   line-height: 200%;
@@ -386,15 +386,6 @@ strong {
 
 
 /*-------------------------------------------------------------------------------*/
-/* Heading that isnt attached to top of page */
-.bigtext {
-  background-color: rgb(54,94,235,0.2);
-  text-align: center;
-  font-size: 80px;
-  color: #345EEB;
-  padding: 150px;
-  line-height: 100%;
-}
 
 .diagtext {
   text-align: left;
@@ -546,46 +537,6 @@ p {
     font-size: 10vw;
   }
 }
-
-
-/*-------------------------------------------------------------------------------*/
-/* Statistics animation */
-.stats {
-  display: flex;
-  gap: 100px;
-  justify-content: center;
-}
-
-.subcount {
-  padding-top: 10%;
-  font-size: 60%;
-}
-
-.circle {
-  width: 50vw; /* Width set as a percentage of viewport width */
-  height: 50vw; /* Height set as a percentage of viewport width to ensure it's always a circle */
-  max-width: 350px; /* Maximum size */
-  max-height: 350px; /* Maximum size */
-  border: 3px #345EEB solid;
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #345EEB;
-  text-align: center;
-  padding: 10px;
-  font-size: 400%;
-  outline: #345EEB 3px solid;
-  outline-offset: -10px;
-  transition: font-size 1s ease;
-}
-
-.circle:hover {
-  font-size: 500%;
-}
-
-
 /*-------------------------------------------------------------------------------*/
 /* Our team grid style */
 .team {
@@ -965,7 +916,7 @@ p {
   font-size: 14px;
   border: 0px;
   transition: all 0.4s ease-in-out;
-  font-family: 'Raleway', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Raleway', 'Merriweather';
   margin-bottom: 5%;
 }
 
