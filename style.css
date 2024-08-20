@@ -33,6 +33,10 @@ strong {
   font-weight: bold;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*-------------------------------------------------------------------------------*/
 /*Top navigation basic styling */
 .topnav {
@@ -50,7 +54,6 @@ strong {
   color: #345EEB;
   text-align: center;
   padding: 40px 32px;
-  text-decoration: underline transparent;
   transition: text-decoration 700ms ease, padding 1s ease-in-out, width 1s ease;
   -webkit-transition: text-decoration 700ms ease, padding 1s ease-in-out, width 1s ease; /* For Safari */
 }
@@ -64,11 +67,12 @@ strong {
 }
 
 .topnav a:hover {
-  text-decoration-color: #345EEB;
+  color: #637df1;
+  cursor: pointer;
 }
 
 .topnav a.active {
-  text-decoration-color: #345EEB;
+  color: #637df1;
 }
 
 .dropdown {
@@ -91,7 +95,8 @@ strong {
 
 .navbar a:hover,
 .dropdown:hover .dropbtn {
-  text-decoration-color: #345EEB;
+  color: #637df1;
+  cursor: pointer;
 }
 
 .dropdown-content {
@@ -166,7 +171,7 @@ strong {
     position: fixed;
     top: 0;
     right: 0;
-    width: 30vw; /* Adjust width */
+    width: 40vw; /* Adjust width */
     overflow: visible;
     height: 100vh;
     background-color: rgba(54, 94, 235, 0.4);
@@ -182,7 +187,7 @@ strong {
     width: 100vw;
     padding: 24px;
     left: 0;
-    margin-left: -70vw; /* Adjust margin */
+    margin-left: -60vw; /* Adjust margin */
     right: 0;
     box-shadow: 0px 1px 24px #345EEB;
     color: #345EEB;
@@ -394,6 +399,15 @@ strong {
 
 
 /*-------------------------------------------------------------------------------*/
+.diag {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  position: absolute;
+  width: 100%;
+  height: 110%;
+  background: linear-gradient(335deg, transparent 49.6%, #345EEB 0.1%, rgba(54, 94, 235, 0.2) 50%);
+}
+
 .diagtext {
   text-align: left;
   font-size: 60px;
@@ -405,15 +419,6 @@ strong {
 
 .diagtext h4 {
   font-size: 24px;
-}
-
-.diag {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  position: absolute;
-  width: 100%;
-  height: 110%;
-  background: linear-gradient(335deg, transparent 49.6%, #345EEB 0.1%, rgba(54, 94, 235, 0.2) 50%);
 }
 
 .diagimage img {
@@ -628,6 +633,7 @@ p {
 
 .flip-box:hover .flip-box-inner {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
 
 .flip-box-front,
@@ -656,6 +662,7 @@ p {
   background-color: #345EEB;
   color: white;
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
   text-align: center;
 }
 
@@ -707,6 +714,7 @@ p {
 
   .subject-list {
     display: none;
+    text-align: left;
     padding-left: 26px;
     margin-top: 10px;
     font-size: 16px;
@@ -718,6 +726,7 @@ p {
 
   .subject-item.active .icon {
     transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
   }
 }
 
@@ -727,6 +736,7 @@ p {
 /* Partners animation */
 .scroller {
   max-width: 85vw;
+  margin-top: 10px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -911,6 +921,7 @@ p {
 }
 .faq-item.active .faq-question .icon {
   transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
 }
 
 /*------------------------------------------*/
