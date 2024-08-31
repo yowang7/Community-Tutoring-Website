@@ -214,7 +214,7 @@ a {
   }
 
   /* Reordering elements */
-  .topnav.responsive a[href="team.html"] { order: 2; } /* Our Team */
+  .topnav.responsive a[href="/team"] { order: 2; } /* Our Team */
   .topnav.responsive .dropdown:nth-of-type(2) { order: 3; } /* Get Involved */
   .topnav.responsive a[href="https://www.gofundme.com/f/raising-money-to-put-towards-improving-tutoring"] { order: 4; } /* Support Us */
   .topnav.responsive .dropdown:nth-of-type(1) { order: 5; } /* Communities */
