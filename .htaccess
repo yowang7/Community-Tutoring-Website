@@ -1,0 +1,19 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Rule to remove "index.html" from URL
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/index\.html [NC]
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Rule to remove ".html" from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+# Redirect specific .html files to their clean URLs
+RewriteRule ^enroll$ enroll.html [NC,L]
+RewriteRule ^volunteer$ volunteer.html [NC,L]
+RewriteRule ^team$ team.html [NC,L]
+
+# General rule to handle any other .html file
+RewriteRule ^([^/]+)$ $1.html [NC,L]
